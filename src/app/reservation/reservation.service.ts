@@ -20,6 +20,7 @@ export class ReservationService {
 
   addReservation(reservation: Reservation): void{
     this.reservations.push(reservation);
+    console.log(this.reservations);
   }
 
   deleteReservation(id: string): void {
@@ -32,5 +33,5 @@ export class ReservationService {
     let index = this.reservations.findIndex(res => res.id === updatedReservation.id);
     this.reservations[index] = updatedReservation;
   }
-  
+
 }
